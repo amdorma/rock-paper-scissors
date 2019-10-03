@@ -66,31 +66,3 @@ buttons.forEach((button) => {
         playRound(playerSelection, computerSelection);
     });
 });
-
-
-/* console.log(playRound())
-
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    let tie = 0
-    for( round = 0; round < 5; round++ ){
-        let round = playRound();
-        if(round.indexOf('won') > -1) {
-            playerScore++
-        } else if (round.indexOf('lost') > -1){
-            computerScore++
-        } else {
-            tie++
-        }
-        console.log(`Player:${playerScore} vs Computer:${computerScore} Ties = ${tie}`);
-    }
-    let playerWinGame = `Player has won the game with ${playerScore} points!`;
-    let computerWinGame = `Computer has won the game with ${computerScore} points! Sucks to suck.`
-    if(playerScore > computerScore) {
-        return playerWinGame;
-    } else {
-        return computerWinGame;
-    }
-}
-*/
