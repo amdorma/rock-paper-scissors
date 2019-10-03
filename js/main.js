@@ -5,14 +5,15 @@ let winner = document.querySelector('#status');
 let buttonSection = document.querySelector('.buttons')
 let results = document.querySelector('.results');
 let playAgain = document.createElement('button');
-playAgain.setAttribute('id', 'play-again')
 
+playAgain.setAttribute('id', 'play-again')
 playAgain.textContent = 'Play again?';
 
 playAgain.addEventListener('click', () => {
     playerScore.textContent = 0;
     computerScore.textContent = 0;
     winner.textContent = 'First to five wins! Select your weapon!';
+    winner.style = 'initial';
     results.removeChild(playAgain);
     buttons.forEach((button) => button.style.display = 'initial');
 })
@@ -36,9 +37,13 @@ function handleResult() {
     const computerScoreFinal = Number(computerScore.textContent);
     if (playerScoreFinal == 5 || computerScoreFinal == 5) {
         if (playerScoreFinal > computerScoreFinal) {
-            winner.textContent = "You Won!"
+            winner.textContent = "You Won!";
+            winner.style.fontWeight = 'bold';
+            winner.style.fontSize = '30px';
         } else {
-            winner.textContent = "You lost!"
+            winner.textContent = "You lost!";
+            winner.style.fontWeight = 'bold';
+            winner.style.fontSize = '30px';
         }
         results.appendChild(playAgain);
         buttons.forEach((button) => button.style.display = 'none');
